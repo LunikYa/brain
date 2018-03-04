@@ -1,7 +1,10 @@
 <template>
   <div class="login">
-    <input type="text" placeholder="Тут">
-    <input type="text" placeholder="Тут">
+    <h2>Login In</h2>
+    <p>Login</p>
+    <input type="text" placeholder="Там">
+    <p>Password</p>
+    <input type="text" placeholder="Там">
   </div>
 </template>
 
@@ -19,8 +22,20 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
   .login{
-    max-width: 600px;
+    width: 400px;
     height: 400px;
     border: 1px solid black;
+    background-color: #fff;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-direction: column;
+    
+  }
+
+  input{
+    width: 280px;
+    height: 30px;
+    margin-bottom: 15px;
   }
 </style>
