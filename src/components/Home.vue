@@ -12,7 +12,7 @@
       <transition name="modal" class="modal">
         <router-view ></router-view>
       </transition>
-    </div>
+      </div>
       
     
     

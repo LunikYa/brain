@@ -15,18 +15,24 @@ export default new Router({
       name: 'StartScreen',
       component: StartScreen,
       children: [
-      {
-        path: 'login',
-        name: 'StartScreenLogin',
-        component: StartScreenLogin
-      },
-      {
-        path: 'register',
-        name: 'StartScreenRegister',
-        component: StartScreenRegister
-      }
-      ]
-    }
+          {
+            path: 'login',
+            name: 'StartScreenLogin',
+            component: StartScreenLogin
+          },
+          {
+            path: 'register',
+            name: 'StartScreenRegister',
+            component: StartScreenRegister
+          }
+          ]
+    },
+
+    // {
+    //   path: '/',
+    //   name: "Home",
+    //   component: Home,
+    // }
     
   ]
 })

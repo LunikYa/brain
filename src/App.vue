@@ -30,7 +30,7 @@ export default {
 }
 
 body{
-   /* background: url("./assets/body-bg.jpg")no-repeat top / cover;*/
+    /*background: url("./assets/body-bg.jpg")no-repeat top / cover;*/
     
   }
 </style>
