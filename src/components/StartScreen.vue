@@ -7,7 +7,7 @@
       <router-link to="/login" >Login</router-link>
       <router-link to="/register">Register</router-link>
     </div>
-     <!-- <StartScreenCarusel v-if=""></StartScreenCarusel> -->
+     <StartScreenCarusel v-if="actualy" ></StartScreenCarusel>
       <div class="window-login">
       <transition name="modal" class="modal">
         <router-view ></router-view>
@@ -20,20 +20,38 @@
 </template>
 
 <script>
-
+import StartScreenLogin from './StartScreenLogin'
+import StartScreenRegister from './StartScreenRegister'
 import StartScreenTopLine from './StartScreenTopLine'
 import StartScreenCarusel from './StartScreenCarusel'
 
 export default {
   components: {
     StartScreenTopLine,
-    StartScreenCarusel
+    StartScreenCarusel,
+    StartScreenLogin,
+    StartScreenRegister
   },
   name: 'StartScreen',
   data () {
     return {
       it: ''
     }
+  },
+
+  computed: {
+    actualy: function(){
+      return !(this.$root.$route.name == "StartScreenLogin" || this.$root.$route.name == "StartScreenRegister")
+    }
+  },
+
+  watch: {
+    '$route': function () {
+//       // this.sendUserEvent ( this.$route.name )
+//       // this.profile = this.$route.name === 'profile'
+//       // this.posts = this.$route.name === 'posts'
+      console.log(this.$root.$route)
+   }
   }
 }
 </script>

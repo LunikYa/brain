@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <start-screen></start-screen>
+    <!-- <start-screen></start-screen> -->
     <!-- <img src="./assets/logo.png"> -->
     <!-- <router-link to="/login">Login</router-link>
     <router-link to="/register">Register</router-link> -->
-    
+    <router-view ></router-view>
   </div>
 </template>
 
 <script>
 
-import StartScreen from './components/StartScreen.vue'
+
 
 export default {
   components: {
-    StartScreen
+    // StartScreen
   },
   name: 'App'
 }
