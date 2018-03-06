@@ -7,9 +7,11 @@
       <router-link to="/login" >Login</router-link>
       <router-link to="/register">Register</router-link>
     </div>
-     <StartScreenCarusel></StartScreenCarusel>
+     <!-- <StartScreenCarusel v-if=""></StartScreenCarusel> -->
       <div class="window-login">
+      <transition name="modal" class="modal">
         <router-view ></router-view>
+      </transition>
       </div>
       
     
@@ -48,6 +50,11 @@ export default {
   .register{
     margin-top: 50px;
   }
-  
+  StartScreenCarusel{
+    margin: 0 auto;
+  }
+
 
 </style>
+
+<!--  -->

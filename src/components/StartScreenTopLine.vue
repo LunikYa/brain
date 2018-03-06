@@ -1,6 +1,6 @@
 <template>
   <div class="top-line">
-    <h1>Traine Braein</h1>
+    <h1>Traine Braine</h1>
   </div>
 </template>
 
@@ -21,7 +21,7 @@ export default {
   .top-line{
     width: 100%;
     height: 50px;
-    background-color: grey;
+    background-color: rgba(0, 119, 177, 0.6);
     color: white;
     position: fixed;
     z-index: 999;
@@ -32,5 +32,6 @@ export default {
     font-size: 18px;
     font-family: Arial;
     font-weight: 600px;
+    margin-top: 10px;
   }
 </style>
