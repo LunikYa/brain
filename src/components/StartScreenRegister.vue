@@ -4,15 +4,13 @@
       <h2>Register</h2>
 
      <img src="../assets/icons8-anonymous-mask-filled-100.png" height="100" width="100" alt="">
-      <form action="">
-        <input type="text" placeholder="Email">
-          
-        <input type="text" placeholder="Password">
-
-        <input type="text" placeholder="Nick">
-
-        <button type="submit" class="button">SIGN IN</button>
-      </form>
+    <form action="">
+        <input type="text" placeholder="Enter you mail">          
+        <input type="text" placeholder="Enter you password">
+        <input type="text" placeholder="Repeat password">
+				<div>{{inc}}</div>
+        <button type="submit" class="button" @click="">SIGN IN</button>
+    </form>
     
   </div>
 </template>
@@ -22,8 +20,18 @@ export default {
   name: 'AppLogin',
   data () {
     return {
-      it: ''
+     
     }
+  },
+  methods: {
+  	test: function(){
+  		this.$store.commit('increment')
+  	}
+  },
+  computed: {
+  	inc: function(){
+  		return this.$root.$store.state.count
+  	}
   }
 }
 </script>
