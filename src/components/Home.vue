@@ -1,58 +1,33 @@
 <template>
   <div>
-    <header>
-      <start-screen-top-line></start-screen-top-line>
-    </header>
-    <div class="register">
-      <router-link to="/login" >Login</router-link>
-      <router-link to="/register">Register</router-link>
-    </div>
-     <StartScreenCarusel v-if="actualy" ></StartScreenCarusel>
-      <div class="window-login">
-      <transition name="modal" class="modal">
-        <router-view ></router-view>
-      </transition>
-      </div>
-      
-    
-    
+    <StartScreenTopLine/>
+    <br>
+    <br>
+    <br>
+    <hr>
+    This is my home
   </div>
 </template>
 
 <script>
-import StartScreenLogin from './StartScreenLogin'
-import StartScreenRegister from './StartScreenRegister'
 import StartScreenTopLine from './StartScreenTopLine'
-import StartScreenCarusel from './StartScreenCarusel'
-
 export default {
-  components: {
-    StartScreenTopLine,
-    StartScreenCarusel,
-    StartScreenLogin,
-    StartScreenRegister
-  },
-  name: 'StartScreen',
+ 
+  name: 'Home',
   data () {
     return {
       it: ''
     }
   },
-
+  components:{
+    StartScreenTopLine,
+  },
   computed: {
-    actualy: function(){
-      return !(this.$root.$route.name == "StartScreenLogin" || this.$root.$route.name == "StartScreenRegister")
-    }
+    // actualy: function(){
+    //   return !(this.$root.$route.name == "StartScreenLogin" || this.$root.$route.name == "StartScreenRegister")
+    // }
   },
 
-  watch: {
-    '$route': function () {
-//       // this.sendUserEvent ( this.$route.name )
-//       // this.profile = this.$route.name === 'profile'
-//       // this.posts = this.$route.name === 'posts'
-      console.log(this.$root.$route)
-   }
-  }
 }
 </script>
 

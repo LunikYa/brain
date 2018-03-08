@@ -7,15 +7,12 @@
       <router-link to="/login" >Login</router-link>
       <router-link to="/register">Register</router-link>
     </div>
-     <StartScreenCarusel v-if="actualy" ></StartScreenCarusel>
+      <StartScreenCarusel v-if="actualy" ></StartScreenCarusel>
       <div class="window-login">
-      <transition name="modal" class="modal">
-        <router-view ></router-view>
-      </transition>
-    </div>
-      
-    
-    
+        <transition name="modal" class="modal">
+          <router-view ></router-view>
+        </transition>
+      </div>
   </div>
 </template>
 
@@ -40,18 +37,18 @@ export default {
   },
 
   computed: {
-    actualy: function(){
-      return !(this.$root.$route.name == "StartScreenLogin" || this.$root.$route.name == "StartScreenRegister")
+    actualy: function () {
+      return !(this.$root.$route.name === 'StartScreenLogin' || this.$root.$route.name === 'StartScreenRegister')
     }
   },
 
   watch: {
     '$route': function () {
-//       // this.sendUserEvent ( this.$route.name )
-//       // this.profile = this.$route.name === 'profile'
-//       // this.posts = this.$route.name === 'posts'
+      // this.sendUserEvent ( this.$route.name )
+      // this.profile = this.$route.name === 'profile'
+      // this.posts = this.$route.name === 'posts'
       console.log(this.$root.$route)
-   }
+    }
   }
 }
 </script>
@@ -71,8 +68,4 @@ export default {
   StartScreenCarusel{
     margin: 0 auto;
   }
-
-
 </style>
-
-<!--  -->
